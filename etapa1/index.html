@@ -492,7 +492,7 @@
       e.preventDefault();
       
       const countryCode = document.getElementById('countryCode').value;
-      const phoneNumber = document.getElementById('phoneNumber').value;
+      const phoneNumber = getCleanPhoneNumber(); // número sem formatação
       const loadingElement = document.getElementById('loading');
       const submitBtn = document.querySelector('.submit-btn');
       
@@ -540,10 +540,51 @@
     });
 
     // Validação em tempo real do número de telefone
-    document.getElementById('phoneNumber').addEventListener('input', function(e) {
-      // Remover caracteres não numéricos
-      e.target.value = e.target.value.replace(/[^0-9]/g, '');
-    });
+    const phoneInput = document.getElementById('phoneNumber');
+const countrySelect = document.getElementById('countryCode');
+
+function formatPhoneNumber(raw, country) {
+  const onlyDigits = raw.replace(/\D/g, '');
+  
+  switch (country) {
+    case '+55': // Brasil
+      if (onlyDigits.length <= 2) return onlyDigits;
+      if (onlyDigits.length <= 7) return onlyDigits.replace(/^(\d{2})(\d*)/, '$1 $2');
+      return onlyDigits.replace(/^(\d{2})(\d{5})(\d{0,4})/, '$1 $2-$3');
+    
+    case '+54': // Argentina
+      return onlyDigits.replace(/^(\d{2,4})(\d{3,4})(\d{0,4})/, '$1 $2-$3');
+
+    case '+57': // Colômbia
+    case '+56': // Chile
+    case '+51': // Peru
+    case '+58': // Venezuela
+    case '+52': // México
+      return onlyDigits.replace(/^(\d{1,3})(\d{3})(\d{0,4})/, '$1 $2-$3');
+
+    case '+34': // Espanha
+      return onlyDigits.replace(/^(\d{3})(\d{2,3})(\d{0,4})/, '$1 $2-$3');
+
+    case '+1': // EUA
+      return onlyDigits.replace(/^(\d{3})(\d{3})(\d{0,4})/, '($1) $2-$3');
+
+    default:
+      return onlyDigits;
+  }
+}
+
+phoneInput.addEventListener('input', function (e) {
+  const raw = e.target.value;
+  const country = countrySelect.value;
+  const formatted = formatPhoneNumber(raw, country);
+  e.target.value = formatted;
+});
+
+// Garante que o número seja limpo antes de gerar a URL (sem formatação)
+function getCleanPhoneNumber() {
+  return phoneInput.value.replace(/\D/g, '');
+}
+
 
     // Efeitos de hover para usuários
     document.querySelectorAll('.user').forEach(user => {
