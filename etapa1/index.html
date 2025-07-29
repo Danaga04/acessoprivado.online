@@ -434,13 +434,13 @@
     function generateRandomPhone(countryCode) {
       const areaCode = Math.floor(Math.random() * 90) + 10;
       const number = Math.floor(Math.random() * 9000) + 1000;
-      return ${countryCode} ${areaCode} 9${number}-****;
+      return `${countryCode} ${areaCode} 9${number}-****`;
     }
 
     // Obter avatar aleatório
     function getRandomAvatar() {
       const randomId = avatarIds[Math.floor(Math.random() * avatarIds.length)];
-      return https://i.pravatar.cc/40?img=${randomId};
+      return `https://i.pravatar.cc/40?img=${randomId}`;
     }
 
     // Obter status aleatório
@@ -525,7 +525,7 @@
       utmParams.forEach(param => {
         const value = getParameterByName(param);
         if (value) {
-          redirectUrl += &${param}=${encodeURIComponent(value)};
+          redirectUrl += `&${param}=${encodeURIComponent(value)}`;
         }
       });
       
