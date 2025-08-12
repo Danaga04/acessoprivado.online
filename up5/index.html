@@ -214,10 +214,16 @@
 
         <div style="margin-top:18px;">
           <div class="price" aria-hidden="true">$ 23,97</div>
-          <!-- Substitua o href abaixo pelo link de checkout real -->
-          <a id="ctaButton" class="cta pulse" href="#TU_LINK_DE_PAGO_AQUI" role="button" aria-label="Desbloquear historial y status secreto">
-            DESBLOQUEAR HISTORIAL + STATUS SECRETO
-          </a>
+          <!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
 
           <p class="note">Si intentaste comprar y por algún motivo falló, por favor inténtalo de nuevo al menos 3 veces más para que nuestro sistema cambie automáticamente de proveedor y funcione correctamente. ¡Gracias!</p>
         </div>
@@ -238,6 +244,13 @@
       </footer>
     </section>
   </main>
+
+  <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
 
   <script>
     // anima a barra até 60% (substitua se quiser outro valor)
