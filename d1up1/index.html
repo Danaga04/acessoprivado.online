@@ -1,35 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPYY APP - Aceso</title>
+  <title>Protocolo Digital</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Esconder ambos os conteúdos inicialmente */
+    #mobile-content, #desktop-content {
+      display: none;
+    }
+    
+    /* Estilos para mobile */
+    .mobile-btn-aceitar {
+      display: inline-block;
+      padding: 20px 40px;
+      margin: 20px 10px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 2s infinite;
+      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      min-width: 280px;
+    }
+    
+    .mobile-btn-aceitar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(40, 167, 69, 0.6);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      }
+      50% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.8), 0 0 0 15px rgba(40, 167, 69, 0.1);
+        transform: scale(1.02);
+      }
+      100% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      }
+    }
+    
+    .mobile-link-recusar {
+      display: inline-block;
+      margin: 15px 10px;
+      color: #666;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      line-height: 1.4;
+      max-width: 300px;
       text-align: center;
     }
+    
+    .mobile-link-recusar:hover {
+      color: #333;
+      text-decoration: none;
+    }
 
+    /* Estilos do mobile (adaptados do segundo HTML) */
     .top-banner {
       background: red;
       color: white;
       font-weight: bold;
       padding: 10px;
       font-size: 16px;
+      text-align: center;
     }
 
     .container {
       padding: 40px 20px;
       max-width: 600px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .logo {
       max-width: 200px;
+      margin: 0 auto;
+      display: block;
     }
 
     .progress-container {
@@ -62,6 +128,7 @@
       font-weight: bold;
       font-size: 20px;
       margin-top: 40px;
+      color: #333;
     }
 
     .faq-item {
@@ -78,16 +145,10 @@
 
     .fornpay_btn {
       background: #3d94f6;
-      background-image: -webkit-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -moz-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -ms-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -o-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -webkit-gradient(to bottom, #3d94f6, #1e62d0);
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
+      background-image: linear-gradient(to bottom, #3d94f6, #1e62d0);
       border-radius: 10px;
       color: #fff;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: 100;
       padding: 10px 20px;
@@ -97,23 +158,345 @@
       cursor: pointer;
       text-align: center;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 20px auto;
     }
 
     .fornpay_downsell {
       color: #004faa;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       margin-top: 10px;
-      font-size: 16px !important;
+      font-size: 16px;
       font-weight: 100;
       text-decoration: none;
       display: block;
       cursor: pointer;
       text-align: center;
     }
+
+    /* Estilos para desktop (mantidos do primeiro HTML) */
+    * {
+      box-sizing: border-box;
+    }
+
+    .desktop-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+
+    .desktop-header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #e8f4f8;
+      margin-bottom: 30px;
+    }
+
+    .desktop-header h1 {
+      color: #2c5530;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+    }
+
+    .content-section h2 {
+      color: #2c5530;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      border-left: 4px solid #4a7c59;
+      padding-left: 15px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .feature-item {
+      background: #f8fffe;
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid #4a7c59;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature-item h3 {
+      color: #2c5530;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .feature-item p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .price-section {
+      background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+      color: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 35px 0;
+    }
+
+    .price-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+
+    .current-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #a8e6cf;
+      margin: 15px 0;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin: 35px 0;
+      flex-wrap: wrap;
+    }
+
+    .desktop-btn {
+      padding: 18px 35px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      min-width: 220px;
+    }
+
+    .desktop-btn.btn-accept {
+      background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+      color: white;
+    }
+
+    .desktop-btn.btn-accept:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(74, 124, 89, 0.4);
+    }
+
+    .desktop-btn.btn-decline {
+      background: #f8f9fa;
+      color: #666;
+      border: 2px solid #dee2e6;
+    }
+
+    .desktop-btn.btn-decline:hover {
+      background: #e9ecef;
+      border-color: #adb5bd;
+    }
+
+    .disclaimer {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 30px 0;
+      font-size: 0.9rem;
+      color: #856404;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+      border: 1px solid #a8e6a8;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .highlight-box h4 {
+      color: #2c5530;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Estilos globais para desktop */
+    #desktop-content {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      .desktop-header h1 {
+        font-size: 2rem;
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .desktop-btn {
+        min-width: 100%;
+      }
+    }
   </style>
+  <script>
+    // Variável global para travar a decisão inicial
+    let contentTypeDecided = false;
+    let isRealMobileDevice = false;
+    
+    function isRealMobile() {
+      const realScreenWidth = screen.width;
+      const realScreenHeight = screen.height;
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const userAgent = navigator.userAgent.toLowerCase();
+      
+      const mobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+      const hasTouchScreen = ('ontouchstart' in window) && (navigator.maxTouchPoints > 0);
+      const hasOrientationAPI = ('orientation' in window);
+      const hasMotionAPI = ('DeviceMotionEvent' in window);
+      const isObviousDesktop = realScreenWidth >= 1366 && realScreenHeight >= 768;
+      const isTooWideForMobile = realScreenWidth > 1024;
+      const viewportDiffWidth = Math.abs(viewportWidth - realScreenWidth);
+      const viewportDiffHeight = Math.abs(viewportHeight - realScreenHeight);
+      const isLikelyEmulator = (viewportDiffWidth > 100 || viewportDiffHeight > 150) && isObviousDesktop;
+      const hasMouseCapability = matchMedia('(any-hover: hover)').matches;
+      const isChromeDesktop = userAgent.includes('chrome') && 
+                             (userAgent.includes('windows') || userAgent.includes('macintosh') || userAgent.includes('linux')) && 
+                             !userAgent.includes('mobile');
+      const maxDimension = Math.max(realScreenWidth, realScreenHeight);
+      const minDimension = Math.min(realScreenWidth, realScreenHeight);
+      const isMobileSize = maxDimension <= 1024 && minDimension <= 768;
+      
+      if (isObviousDesktop && hasMouseCapability && !hasTouchScreen) {
+        return false;
+      }
+      if (isLikelyEmulator && isChromeDesktop) {
+        return false;
+      }
+      if (mobileUA && (hasTouchScreen || isMobileSize)) {
+        return true;
+      }
+      if (isMobileSize && hasTouchScreen && hasOrientationAPI) {
+        return true;
+      }
+      if (realScreenWidth <= 768 && viewportWidth <= 768) {
+        return true;
+      }
+      return false;
+    }
+    
+    function forceDesktopView() {
+      document.getElementById("desktop-content").style.display = "block";
+      document.getElementById("mobile-content").style.display = "none";
+      contentTypeDecided = true;
+      isRealMobileDevice = false;
+    }
+    
+    function forceMobileView() {
+      document.getElementById("mobile-content").style.display = "block";
+      document.getElementById("desktop-content").style.display = "none";
+      contentTypeDecided = true;
+      isRealMobileDevice = true;
+    }
+    
+    function showContent() {
+      if (contentTypeDecided) {
+        return;
+      }
+      if (isRealMobile()) {
+        forceMobileView();
+      } else {
+        forceDesktopView();
+      }
+    }
+    
+    function detectDevToolsAfterLoad() {
+      const threshold = 200;
+      const isDevToolsOpen = (window.outerHeight - window.innerHeight > threshold) ||
+                            (window.outerWidth - window.innerWidth > threshold);
+      const hasDesktopScreen = screen.width >= 1366;
+      if (isDevToolsOpen && isRealMobileDevice && hasDesktopScreen) {
+        forceDesktopView();
+      }
+    }
+    
+    window.addEventListener('load', () => {
+      showContent();
+      setInterval(detectDevToolsAfterLoad, 2000);
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (screen.width >= 1366 && 
+          (e.keyCode === 123 || 
+           (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+           (e.ctrlKey && e.keyCode === 85))) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    document.addEventListener('contextmenu', (e) => {
+      if (screen.width >= 1366) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    if (typeof console !== 'undefined') {
+      setInterval(() => {
+        console.clear();
+      }, 10000);
+    }
+  </script>
 </head>
 <body>
+
+<!-- CONTEÚDO PARA MOBILE (adaptado do segundo HTML) -->
+<div id="mobile-content">
   <div class="top-banner">¿EL PRECIO ES UN PROBLEMA PARA TI?</div>
   <div class="container">
     <img src="https://i.postimg.cc/s2hWrVKw/What-Spy-Logo-PNG-WEBP.webp" alt="SPYY APP" class="logo">
@@ -130,22 +513,18 @@
 
     <div class="price-circle">$ 6,93</div>
 
- <!-- HOTMART - Sales Funnel Widget -->
-<!--- sales funnel container --->
-<div id="hotmart-sales-funnel"></div>
+    <!-- HOTMART - Sales Funnel Widget -->
+    <div id="hotmart-sales-funnel"></div>
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <script>
+      checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+    </script>
+    <!-- HOTMART - Sales Funnel Widget -->
 
-<!--- script load and setup --->
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-<script>
-checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
-</script>
-<!-- HOTMART - Sales Funnel Widget -->
-
-	  <!-- AVISO DE REINTENTO -->
-<p style="font-size: 14px; color: #555; margin-top: 10px;">
-  Si intentaste comprar y por algún motivo falló, por favor inténtalo de nuevo al menos 3 veces más para que nuestro sistema cambie automáticamente de proveedor y funcione correctamente. ¡Gracias!
-</p>
-	
+    <!-- AVISO DE REINTENTO -->
+    <p style="font-size: 14px; color: #555; margin-top: 10px;">
+      Si intentaste comprar y por algún motivo falló, por favor inténtalo de nuevo al menos 3 veces más para que nuestro sistema cambie automáticamente de proveedor y funcione correctamente. ¡Gracias!
+    </p>
 
     <div class="faq-title">PREGUNTAS FRECUENTES</div>
     <div class="faq-item">↩ ¿Por qué debo pagar esta tarifa?</div>
@@ -153,8 +532,96 @@ checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
       Esta es una tarifa para mantener nuestros servidores en funcionamiento y la aplicación funcionando al 100 % en tu teléfono. Sin esta tarifa, no podemos liberar la aplicación.
     </div>
   </div>
+</div>
 
-  <script
+<!-- CONTEÚDO PARA DESKTOP (mantido do primeiro HTML) -->
+<div id="desktop-content">
+  <div class="desktop-container">
+    <div class="desktop-header">
+      <h1>🧠 Protocolo Digital: Mantenha Sua Mente Ativa</h1>
+      <p class="subtitle">Um curso digital voltado para pessoas a partir dos 40 anos que desejam manter o cérebro ativo, o foco em dia e a memória afiada de forma natural e equilibrada.</p>
+    </div>
+
+    <div class="content-section">
+      <h2>Preserve Sua Clareza Mental com Hábitos Saudáveis</h2>
+      <p>Através de orientações práticas sobre alimentação, sono, rotina e exercícios cognitivos, o Protocolo Digital ensina como adotar hábitos saudáveis para preservar a clareza mental e o bem-estar no dia a dia. Ideal para quem busca mais presença, produtividade e leveza mental com o passar dos anos.</p>
+    </div>
+
+    <div class="highlight-box">
+      <h4>🧩 Ciência e Prática para o Bem-Estar Mental</h4>
+      <p>Baseado em estudos científicos e práticas comprovadas, este curso combina estratégias modernas e acessíveis para fortalecer sua mente de forma natural.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <h3>🍎 Alimentação para o Cérebro</h3>
+        <p>Guia completo sobre alimentos que estimulam a saúde cerebral, incluindo dietas ricas em antioxidantes, ômega-3 e nutrientes essenciais.</p>
+      </div>
+      <div class="feature-item">
+        <h3>😴 Rotinas de Sono Otimizadas</h3>
+        <p>Estratégias para melhorar a qualidade do sono, essencial para a recuperação cerebral e manutenção da memória.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🧠 Exercícios Cognitivos</h3>
+        <p>Atividades práticas e divertidas para treinar memória, foco e raciocínio, adaptadas para o dia a dia.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🕒 Rotinas Diárias Eficientes</h3>
+        <p>Planos para organizar sua rotina, reduzindo o estresse e promovendo equilíbrio mental e emocional.</p>
+      </div>
+      <div class="feature-item">
+        <h3>📚 Aprendizado Contínuo</h3>
+        <p>Técnicas para manter o cérebro ativo através de novos aprendizados e desafios intelectuais.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🛡️ Prevenção do Declínio Cognitivo</h3>
+        <p>Estratégias para proteger sua mente contra os efeitos do envelhecimento e manter a clareza por mais tempo.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>O Que Incluye o Protocolo Digital:</h2>
+      <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+        <ul style="margin-left: 20px; color: #555; line-height: 1.8;">
+          <li>✅ <strong>Curso Digital Completo:</strong> Acesso a um curso em vídeo e PDF com todas as orientações detalhadas.</li>
+          <li>✅ <strong>Guia de Alimentação:</strong> Planos alimentares para nutrir o cérebro e melhorar o foco.</li>
+          <li>✅ <strong>Exercícios Práticos:</strong> Atividades cognitivas personalizáveis para todas as idades.</li>
+          <li>✅ <strong>Estratégias de Sono:</strong> Técnicas para otimizar o descanso e a recuperação mental.</li>
+          <li>✅ <strong>Planejamento de Rotina:</strong> Modelos para organizar seu dia de forma produtiva e equilibrada.</li>
+          <li>✅ <strong>Apoio Contínuo:</strong> Atualizações regulares com novas dicas e práticas.</li>
+          <li>✅ <strong>Acceso Inmediato:</strong> Comece hoje mesmo após a confirmação do pagamento.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-section">
+      <h3>Inversión en Tu Salud Mental</h3>
+      <div class="original-price">Valor regular: $47 USD</div>
+      <div class="current-price">$7,94 USD</div>
+      <p style="font-size: 0.95rem; opacity: 0.9;">Pago único • Acceso inmediato al curso completo</p>
+    </div>
+
+    <div class="buttons-container">
+      <!-- HOTMART - Sales Funnel Widget -->
+      <div id="hotmart-sales-funnel"></div>
+      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <script>
+        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+      </script>
+      <!-- HOTMART - Sales Funnel Widget -->
+    </div>
+
+    <div class="disclaimer">
+      <strong>Importante:</strong> Este curso está basado en estudios científicos y prácticas validadas para promover la salud mental. El contenido es de carácter educativo e informativo. Siempre consulte con un profesional de la salud antes de iniciar cualquier cambio en su rutina, especialmente si tiene condiciones médicas preexistentes.
+    </div>
+  </div>
+
+  <script>
+    new OcuExternal();
+  </script>
+</div>
+
+<script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
   data-utmify-prevent-subids
