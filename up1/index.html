@@ -558,8 +558,17 @@
 
     <div class="price-circle">$ 7,93</div>
 
+
     <!-- HOTMART - Sales Funnel Widget -->
-    <div id="hotmart-sales-funnel"></div>
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
 
     <!-- AVISO DE REINTENTO -->
     <p style="font-size: 14px; color: #555; margin-top: 10px;">
@@ -642,29 +651,29 @@
         </div>
 
         <div class="buttons-container">
-            <!-- HOTMART - Sales Funnel Widget -->
-            <div id="hotmart-sales-funnel" class="desktop-btn btn-accept"></div>
-            <a href="https://boasalud.mycartpanda.com/ex-ocu/next-offer/69YNaedVX7?accepted=no" class="desktop-btn btn-decline fornpay_downsell">
-                ❌ No gracias, continuar
-            </a>
-        </div>
+          <!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
 
         <div class="disclaimer">
             <strong>Importante:</strong> Este curso está basado en estudios científicos y prácticas validadas para promover la salud mental. El contenido es de carácter educativo e informativo. Siempre consulte con un profesional de la salud antes de iniciar cualquier cambio en su rutina, especialmente si tiene condiciones médicas preexistentes.
         </div>
     </div>
 
-    <script src="https://assets.mycartpanda.com/cartx-ecomm-ui-assets/js/libs/ocu-external.js"></script>
+
     <script>
         new OcuExternal();
     </script>
 </div>
 
-<!-- Scripts do mobile -->
-<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
-<script>
-  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
-</script>
+
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
