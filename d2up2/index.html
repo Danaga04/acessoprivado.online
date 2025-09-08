@@ -3,32 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPYY APP - Oferta Especial</title>
+  <title>TRUCO DE L.WHT.S.: Como Tocar Baixo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fff;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Esconder ambos os conteúdos inicialmente */
+    #mobile-content, #desktop-content {
+      display: none;
+    }
+    
+    /* Estilos para mobile */
+    .mobile-btn-aceitar {
+      display: inline-block;
+      padding: 20px 40px;
+      margin: 20px 10px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 2s infinite;
+      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      min-width: 280px;
+    }
+    
+    .mobile-btn-aceitar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(40, 167, 69, 0.6);
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      }
+      50% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.8), 0 0 0 15px rgba(40, 167, 69, 0.1);
+        transform: scale(1.02);
+      }
+      100% {
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+      }
+    }
+    
+    .mobile-link-recusar {
+      display: inline-block;
+      margin: 15px 10px;
+      color: #666;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      line-height: 1.4;
+      max-width: 300px;
       text-align: center;
     }
+    
+    .mobile-link-recusar:hover {
+      color: #333;
+      text-decoration: none;
+    }
 
+    /* Estilos do mobile */
     .top-banner {
       background: red;
       color: white;
       font-weight: bold;
       padding: 10px;
       font-size: 16px;
+      text-align: center;
     }
 
     .container {
       padding: 40px 20px;
       max-width: 600px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .logo {
       max-width: 200px;
+      margin: 0 auto;
+      display: block;
     }
 
     .progress-container {
@@ -61,6 +128,7 @@
       font-weight: bold;
       font-size: 20px;
       margin-top: 40px;
+      color: #333;
     }
 
     .faq-item {
@@ -77,16 +145,10 @@
 
     .fornpay_btn {
       background: #3d94f6;
-      background-image: -webkit-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -moz-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -ms-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -o-linear-gradient(top, #3d94f6, #1e62d0);
-      background-image: -webkit-gradient(to bottom, #3d94f6, #1e62d0);
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
+      background-image: linear-gradient(to bottom, #3d94f6, #1e62d0);
       border-radius: 10px;
       color: #fff;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       font-size: 18px;
       font-weight: 100;
       padding: 10px 20px;
@@ -96,23 +158,345 @@
       cursor: pointer;
       text-align: center;
       max-width: 400px;
-      margin: 0 auto;
+      margin: 20px auto;
     }
 
     .fornpay_downsell {
       color: #004faa;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       margin-top: 10px;
-      font-size: 16px !important;
+      font-size: 16px;
       font-weight: 100;
       text-decoration: none;
       display: block;
       cursor: pointer;
       text-align: center;
     }
+
+    /* Estilos para desktop */
+    * {
+      box-sizing: border-box;
+    }
+
+    .desktop-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+
+    .desktop-header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #e8f4f8;
+      margin-bottom: 30px;
+    }
+
+    .desktop-header h1 {
+      color: #2c5530;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+    }
+
+    .content-section h2 {
+      color: #2c5530;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      border-left: 4px solid #4a7c59;
+      padding-left: 15px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+
+    .feature-item {
+      background: #f8fffe;
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid #4a7c59;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature-item h3 {
+      color: #2c5530;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .feature-item p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .price-section {
+      background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+      color: white;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 35px 0;
+    }
+
+    .price-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+
+    .current-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #a8e6cf;
+      margin: 15px 0;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin: 35px 0;
+      flex-wrap: wrap;
+    }
+
+    .desktop-btn {
+      padding: 18px 35px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      min-width: 220px;
+    }
+
+    .desktop-btn.btn-accept {
+      background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+      color: white;
+    }
+
+    .desktop-btn.btn-accept:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(74, 124, 89, 0.4);
+    }
+
+    .desktop-btn.btn-decline {
+      background: #f8f9fa;
+      color: #666;
+      border: 2px solid #dee2e6;
+    }
+
+    .desktop-btn.btn-decline:hover {
+      background: #e9ecef;
+      border-color: #adb5bd;
+    }
+
+    .disclaimer {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 30px 0;
+      font-size: 0.9rem;
+      color: #856404;
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+      border: 1px solid #a8e6a8;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0;
+      text-align: center;
+    }
+
+    .highlight-box h4 {
+      color: #2c5530;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Estilos globais para desktop */
+    #desktop-content {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-container {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      .desktop-header h1 {
+        font-size: 2rem;
+      }
+
+      .buttons-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .desktop-btn {
+        min-width: 100%;
+      }
+    }
   </style>
+  <script>
+    // Variável global para travar a decisão inicial
+    let contentTypeDecided = false;
+    let isRealMobileDevice = false;
+    
+    function isRealMobile() {
+      const realScreenWidth = screen.width;
+      const realScreenHeight = screen.height;
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const userAgent = navigator.userAgent.toLowerCase();
+      
+      const mobileUA = /android|.webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+      const hasTouchScreen = ('ontouchstart' in window) && (navigator.maxTouchPoints > 0);
+      const hasOrientationAPI = ('orientation' in window);
+      const hasMotionAPI = ('DeviceMotionEvent' in window);
+      const isObviousDesktop = realScreenWidth >= 1366 && realScreenHeight >= 768;
+      const isTooWideForMobile = realScreenWidth > 1024;
+      const viewportDiffWidth = Math.abs(viewportWidth - realScreenWidth);
+      const viewportDiffHeight = Math.abs(viewportHeight - realScreenHeight);
+      const isLikelyEmulator = (viewportDiffWidth > 100 || viewportDiffHeight > 150) && isObviousDesktop;
+      const hasMouseCapability = matchMedia('(any-hover: hover)').matches;
+      const isChromeDesktop = userAgent.includes('chrome') && 
+                             (userAgent.includes('windows') || userAgent.includes('macintosh') || userAgent.includes('linux')) && 
+                             !userAgent.includes('mobile');
+      const maxDimension = Math.max(realScreenWidth, realScreenHeight);
+      const minDimension = Math.min(realScreenWidth, realScreenHeight);
+      const isMobileSize = maxDimension <= 1024 && minDimension <= 768;
+      
+      if (isObviousDesktop && hasMouseCapability && !hasTouchScreen) {
+        return false;
+      }
+      if (isLikelyEmulator && isChromeDesktop) {
+        return false;
+      }
+      if (mobileUA && (hasTouchScreen || isMobileSize)) {
+        return true;
+      }
+      if (isMobileSize && hasTouchScreen && hasOrientationAPI) {
+        return true;
+      }
+      if (realScreenWidth <= 768 && viewportWidth <= 768) {
+        return true;
+      }
+      return false;
+    }
+    
+    function forceDesktopView() {
+      document.getElementById("desktop-content").style.display = "block";
+      document.getElementById("mobile-content").style.display = "none";
+      contentTypeDecided = true;
+      isRealMobileDevice = false;
+    }
+    
+    function forceMobileView() {
+      document.getElementById("mobile-content").style.display = "block";
+      document.getElementById("desktop-content").style.display = "none";
+      contentTypeDecided = true;
+      isRealMobileDevice = true;
+    }
+    
+    function showContent() {
+      if (contentTypeDecided) {
+        return;
+      }
+      if (isRealMobile()) {
+        forceMobileView();
+      } else {
+        forceDesktopView();
+      }
+    }
+    
+    function detectDevToolsAfterLoad() {
+      const threshold = 200;
+      const isDevToolsOpen = (window.outerHeight - window.innerHeight > threshold) ||
+                            (window.outerWidth - window.innerWidth > threshold);
+      const hasDesktopScreen = screen.width >= 1366;
+      if (isDevToolsOpen && isRealMobileDevice && hasDesktopScreen) {
+        forceDesktopView();
+      }
+    }
+    
+    window.addEventListener('load', () => {
+      showContent();
+      setInterval(detectDevToolsAfterLoad, 2000);
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (screen.width >= 1366 && 
+          (e.keyCode === 123 || 
+           (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+           (e.ctrlKey && e.keyCode === 85))) {
+        e.preventDefault;
+        return false;
+      }
+    });
+    
+    document.addEventListener('contextmenu', (e) => {
+      if (screen.width >= 1366) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    if (typeof console !== 'undefined') {
+      setInterval(() => {
+        console.clear();
+      }, 10000);
+    }
+  </script>
 </head>
 <body>
+
+<!-- CONTEÚDO PARA MOBILE -->
+<div id="mobile-content">
   <div class="top-banner">¡NO CIERRES ESTA PÁGINA, AÚN TENEMOS UNA OFERTA ESPECIAL PARA TI!</div>
   <div class="container">
     <img src="https://i.postimg.cc/wMGBw5N0/edp.png" alt="SPYY APP" class="logo">
@@ -138,13 +522,10 @@
     <div class="price-circle">$ 8,91</div>
 
     <!-- HOTMART - Sales Funnel Widget -->
-    <!--- sales funnel container --->
     <div id="hotmart-sales-funnel"></div>
-
-    <!--- script load and setup --->
     <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
     <script>
-    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+      checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
     </script>
     <!-- HOTMART - Sales Funnel Widget -->
 
@@ -175,14 +556,102 @@
       ¡Sí! Según nuestras estadísticas internas, de cada 10 personas que ven esta oferta, 9 deciden llevarla. ¡No te quedes fuera!
     </div>
   </div>
+</div>
 
-  <script
+<!-- CONTEÚDO PARA DESKTOP -->
+<div id="desktop-content">
+  <div class="desktop-container">
+    <div class="desktop-header">
+      <h1>🎸 TRUCO DE L.WHT.S.: Como Tocar Baixo</h1>
+      <p class="subtitle">Una jornada práctica y teórica para principiantes y músicos que desean profundizar sus habilidades en el bajo eléctrico, dominando fundamentos, técnicas y repertorio.</p>
+    </div>
+
+    <div class="content-section">
+      <h2>Domina el Bajo Eléctrico con Confianza</h2>
+      <p>El curso <strong>TRUCO DE L.WHT.S.: Como Tocar Baixo</strong> es una jornada práctica y teórica diseñada para principiantes y músicos que desean llevar sus habilidades al siguiente nivel. Con un enfoque en fundamentos esenciales, técnicas de ejecución, teoría musical aplicada y práctica en repertorios, este curso te capacita para dominar el bajo eléctrico. En pocas semanas, aprenderás desde las bases de postura y afinación hasta la creación de líneas propias y práctica en grupo, preparándote para tocar con confianza en diversos contextos musicales.</p>
+    </div>
+
+    <div class="highlight-box">
+      <h4>🎵 Aprendizaje Práctico y Estructurado</h4>
+      <p>Basado en métodos probados, este curso combina teoría musical y práctica guiada para que desarrolles habilidades sólidas en el bajo eléctrico de forma accesible y efectiva.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <h3>🎶 Fundamentos Esenciales</h3>
+        <p>Aprende las bases de postura, afinación y técnicas básicas para tocar el bajo con confianza.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🎸 Técnicas de Ejecución</h3>
+        <p>Domina técnicas como slap, pop, fingerstyle y púa para diversificar tu estilo.</p>
+      </div>
+      <div class="feature-item">
+        <h3>📘 Teoría Musical Aplicada</h3>
+        <p>Entiende escalas, acordes y progresiones para construir líneas de bajo sólidas.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🎼 Práctica de Repertorio</h3>
+        <p>Toca canciones de diversos géneros y crea tus propias líneas de bajo.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🎤 Práctica en Grupo</h3>
+        <p>Desarrolla habilidades para tocar con otros músicos en ensayos y presentaciones.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🚀 Progresión Rápida</h3>
+        <p>En pocas semanas, estarás listo para tocar con confianza en diferentes contextos musicales.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>¿Qué Incluye el Curso?</h2>
+      <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+        <ul style="margin-left: 20px; color: #555; line-height: 1.8;">
+          <li>✅ <strong>Curso Digital Completo:</strong> Acceso a videos y materiales en PDF con lecciones detalladas.</li>
+          <li>✅ <strong>Guía de Técnicas:</strong> Instrucciones paso a paso para dominar diferentes estilos de ejecución.</li>
+          <li>✅ <strong>Ejercicios Prácticos:</strong> Actividades para desarrollar habilidades técnicas y musicales.</li>
+          <li>✅ <strong>Teoría Musical Simplificada:</strong> Contenido accesible para entender la música detrás del bajo.</li>
+          <li>✅ <strong>Repertorio Variado:</strong> Canciones para practicar y aplicar lo aprendido.</li>
+          <li>✅ <strong>Actualizaciones Continuas:</strong> Nuevos contenidos y recursos para tu aprendizaje.</li>
+          <li>✅ <strong>Acceso Inmediato:</strong> Comienza tu curso tras la confirmación del pago.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-section">
+      <h3>Inversión en Tu Talento Musical</h3>
+      <div class="original-price">Valor regular: $47 USD</div>
+      <div class="current-price">$7,94 USD</div>
+      <p style="font-size: 0.95rem; opacity: 0.9;">Pago único • Acceso inmediato al curso completo</p>
+    </div>
+
+    <div class="buttons-container">
+      <!-- HOTMART - Sales Funnel Widget -->
+      <div id="hotmart-sales-funnel"></div>
+      <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <script>
+        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+      </script>
+      <!-- HOTMART - Sales Funnel Widget -->
+    </div>
+
+    <div class="disclaimer">
+      <strong>Importante:</strong> Este curso está diseñado para proporcionar una educación musical práctica y teórica. Los resultados pueden variar según el esfuerzo y dedicación del alumno. Consulta con un profesor de música si necesitas orientación personalizada.
+    </div>
+  </div>
+
+  <script>
+    new OcuExternal();
+  </script>
+</div>
+
+<script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
   data-utmify-prevent-xcod-sck
   data-utmify-prevent-subids
   async
   defer
-  ></script>
+></script>
 
 </body>
 </html>
