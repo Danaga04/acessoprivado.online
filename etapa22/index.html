@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				<div class="elementor-element elementor-element-46b798dc elementor-widget elementor-widget-html" data-id="46b798dc" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<div class="overflow: hidden; border-radius: 10px; width: 100%; max-width: 640px; margin: auto;">
-    <vturb-smartplayer id="vid-68c83c96423996927f8254f7" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/68c83c96423996927f8254f7/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+   <vturb-smartplayer id="vid-68c83c96423996927f8254f7" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/80d0b89d-7901-4c62-bf15-807e2dab2483/players/68c83c96423996927f8254f7/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
 				
 </div>		</div>
 				</div>
@@ -244,8 +244,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			<script>
 document.addEventListener('DOMContentLoaded', function() {
   let currentStep = 1;
-  const waitTimesBefore = [0, 1.0, 1.0, 1.0, 1.9, 1.9, 2.9, 3.8]; // Tempos de espera antes de mostrar cada item
-  const waitTimesAfter = [0, 15.3, 15.3, 15.3, 17.3, 19.2, 21.1, 23.0]; // Tempos de espera antes de marcar como completo
+const waitTimesBefore = [0, 0.5, 1.0, 2.0, 4.0, 7.0, 12.0, 18.0]; // Tempos de espera antes de mostrar cada item
+const waitTimesAfter = [0, 8.0, 15.0, 25.0, 38.0, 55.0, 75.0, 95.0]; // Tempos de espera antes de marcar como completo
   
   function completeItem(item, isLast) {
     const icon = item.querySelector('.status-icon');
