@@ -150,7 +150,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				<div class="elementor-widget-container">
 			<div class="user-card">
   <div class="user-photo" style="background-image: url(" https:="" i.postimg.cc="" 2jwfwvr9="" 08.png");"=""></div>
-  <div class="user-info">+55 11 9XXXX-XXXX</div>
+  <div class="user-info">(+1) 555-XXXX</div>
 </div>
 		</div>
 				</div>
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Função para formatar o número de telefone
   const formatTel = (tel) => {
-    if (!tel || tel.length < 10) return '+55 11 9XXXX-XXXX'; // Retorno padrão se não houver tel ou for muito curto
+    if (!tel || tel.length < 10) return '+1 555-XXXX'; // Retorno padrão se não houver tel ou for muito curto
     const countryCode = tel.substring(0, 2); // '+55'
     const areaCode = tel.substring(2, 4); // '11'
     const needsNine = (tel.length === 10 || tel[4] !== '9');
