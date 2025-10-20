@@ -1,7 +1,5 @@
-
-     
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="es">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -38,7 +36,7 @@
     </style>
 
     <meta name="theme-color" content="#006B54">
-    <meta name="description" content="Trust Signals — validação de sinais de perfil público.">
+    <meta name="description" content="Trust Signals — validación de señales de perfil público.">
 </head>
 <body class="min-h-screen bg-neutral-50 font-sans antialiased selection:bg-brand/10 selection:text-brand-800">
     <div class="h-1 w-full bg-neutral-200">
@@ -56,12 +54,12 @@
         <div class="bg-white rounded-2xl shadow-elev p-6 border border-neutral-200">
             <div class="text-center space-y-4">
                 <h2 id="t-ready" class="text-xl font-semibold text-brand-700" data-i18n="ready">
-                    Cansado de Mentiras?
+                    ¿Cansado de mentiras?
                 </h2>
 
                 <p class="text-neutral-900 text-lg font-semibold leading-snug">
-                    <span id="t-head-1" class="block" data-i18n="headline1">O Trust Signals revelará</span>
-                    <span id="t-head-2" class="block" data-i18n="headline2">a verdade sobre seu parceiro.</span>
+                    <span id="t-head-1" class="block" data-i18n="headline1">Trust Signals revelará</span>
+                    <span id="t-head-2" class="block" data-i18n="headline2">la verdad sobre tu pareja.</span>
                 </p>
 
                 <div class="mx-auto flex flex-wrap items-center justify-center gap-3 text-neutral-700">
@@ -69,9 +67,9 @@
                         <img src="https://i.postimg.cc/yYM5h9dZ/whatsapp-icon.webp" alt="WhatsApp" class="h-6 w-6">
                     </span>
                     <p class="text-base leading-snug text-center">
-                        <span class="block sm:inline" id="t-enter-1" data-i18n="enter1">Digite o</span>
-                        <span class="block sm:inline">&nbsp;<span class="text-brand font-semibold" id="t-phone" data-i18n="phone">número de telefone</span></span>
-                        <span class="block sm:inline" id="t-enter-2" data-i18n="enter2">&nbsp;que deseja espionar</span>
+                        <span class="block sm:inline" id="t-enter-1" data-i18n="enter1">Ingresa el</span>
+                        <span class="block sm:inline">&nbsp;<span class="text-brand font-semibold" id="t-phone" data-i18n="phone">número de teléfono</span></span>
+                        <span class="block sm:inline" id="t-enter-2" data-i18n="enter2">&nbsp;que deseas investigar</span>
                     </p>
                 </div>
             </div>
@@ -84,8 +82,8 @@
                             id="phoneNumber"
                             required
                             class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-[15px] outline-none ring-offset-2 transition
-                                   focus:border-brand focus:ring-2 focus:ring-brand/30"
-                            placeholder="ex.: 11 91234-5678"
+                                        focus:border-brand focus:ring-2 focus:ring-brand/30"
+                            placeholder="ex.: 55 11 91234-5678"
                             autocomplete="tel"
                             inputmode="tel"
                         />
@@ -96,8 +94,8 @@
                 <div class="mx-auto w-full max-w-md">
                     <button type="submit" id="submitBtn"
                         class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 text-[15px] font-semibold text-white
-                               shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:opacity-70">
-                        <span class="btn__label" id="t-cta" data-i18n="cta">Espionar agora</span>
+                                     shadow-sm transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40 disabled:opacity-70">
+                        <span class="btn__label" id="t-cta" data-i18n="cta">Investigar ahora</span>
                         <svg class="btn__spinner hidden animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -109,13 +107,13 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2a9.99 9.99 0 00-10 10c0 5.523 4.477 10 10 10s10-4.477 10-10A9.99 9.99 0 0012 2zm0 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm2 14h-4v-2h1v-5h-1V9h3v8h1v2z"/>
                     </svg>
-                    <p id="t-privacy" data-i18n="privacy">A pessoa não será notificada.</p>
+                    <p id="t-privacy" data-i18n="privacy">La persona no será notificada.</p>
                 </div>
             </form>
         </div>
 
         <p class="mt-6 text-center text-xs text-neutral-500" id="t-terms" data-i18n="terms">
-            Ao continuar, você concorda com <br>nossos Termos e Política de Privacidade.
+            Al continuar, aceptas nuestros <br>Términos y Política de Privacidad.
         </p>
     </main>
 
@@ -123,43 +121,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
     <script>
-        /* ================= I18N (SEM MT; FALLBACK SEMPRE EN) ================= */
+        /* ================= I18N (APENAS ES E FALLBACK ES-MX) ================= */
         const ENABLE_MT = false;
 
         // Cópias multi-idioma
         const I18N = {
-            pt: {
-                title:'Trust Signals',
-                ready:'Cansado de Mentiras?',
-                headline1:'O Trust Signals revelará',
-                headline2:'a verdade sobre seu parceiro.',
-                enter1:'Digite o',
-                phone:'número de telefone',
-                enter2:'que deseja espionar',
-                label:'Número (DDD + número — o código do país já está na bandeira)',
-                cta:'Espionar agora',
-                privacy:'A pessoa não será notificada.',
-                terms:'Ao continuar, você concorda com <br>nossos Termos e Política de Privacidade.',
-                errInvalid:'Este número não é válido. Verifique e tente novamente.',
-                errRange:'Informe um número nacional válido.',
-                ctaLoading:'Pesquisando...'
-            },
-            en: {
-                title:'Trust Signals',
-                ready:'Are you tired of lies?',
-                headline1:'Trust Signals will reveal',
-                headline2:'the truth about your partner.',
-                enter1:'Enter the',
-                phone:'phone number',
-                enter2:'you want to check',
-                label:'Number (area code + number — country code is in the flag)',
-                cta:'Check now',
-                privacy:'The person will not be notified.',
-                terms:'By continuing, you agree to our <br>Terms and Privacy Policy.',
-                errInvalid:'This number is not valid. Please check and try again.',
-                errRange:'Please enter a valid national phone number.',
-                ctaLoading:'Searching...'
-            },
             es: {
                 title:'Trust Signals',
                 ready:'¿Cansado de mentiras?',
@@ -192,118 +158,34 @@
                 errRange:'Escribe un número nacional válido.',
                 ctaLoading:'Buscando...'
             },
-            fr: {
+            // Manter uma versão de fallback caso as principais falhem. Usaremos ES.
+            fallback: {
                 title:'Trust Signals',
-                ready:'Marre des mensonges ?',
-                headline1:'Trust Signals révélera',
-                headline2:'la vérité sur votre partenaire.',
-                enter1:'Saisissez le',
-                phone:'numéro de téléphone',
-                enter2:'que vous souhaitez vérifier',
-                label:'Numéro (indicatif + numéro — le code pays est dans le drapeau)',
-                cta:'Vérifier maintenant',
-                privacy:'La personne ne sera pas informée.',
-                terms:'En continuant, vous acceptez nos <br>Conditions et Politique de confidentialité.',
-                errInvalid:'Numéro invalide. Veuillez vérifier et réessayer.',
-                errRange:'Saisissez un numéro national valide.',
-                ctaLoading:'Recherche...'
-            },
-            de: {
-                title:'Trust Signals',
-                ready:'Genug von Lügen?',
-                headline1:'Trust Signals deckt auf,',
-                headline2:'was Ihr Partner wirklich verheimlicht.',
-                enter1:'Geben Sie die',
-                phone:'Telefonnummer',
-                enter2:'ein, die Sie prüfen möchten',
-                label:'Nummer (Vorwahl + Nummer — Ländercode ist in der Flagge)',
-                cta:'Jetzt prüfen',
-                privacy:'Die Person wird nicht benachrichtigt.',
-                terms:'Mit dem Fortfahren akzeptieren Sie unsere <br>Nutzungsbedingungen und Datenschutzrichtlinie.',
-                errInvalid:'Diese Nummer ist ungültig. Bitte prüfen und erneut versuchen.',
-                errRange:'Bitte geben Sie eine gültige nationale Rufnummer ein.',
-                ctaLoading:'Suche...'
-            },
-            ru: {
-                title:'Trust Signals',
-                ready:'Устали от лжи?',
-                headline1:'Trust Signals раскроет',
-                headline2:'правду о вашем партнере.',
-                enter1:'Введите',
-                phone:'номер телефона',
-                enter2:'который хотите проверить',
-                label:'Номер (код города + номер — код страны в флаге)',
-                cta:'Проверить сейчас',
-                privacy:'Человек не будет уведомлен.',
-                terms:'Продолжая, вы соглашаетесь с нашими <br>Условиями и Политикой конфиденциальности.',
-                errInvalid:'Неверный номер. Проверьте и повторите попытку.',
-                errRange:'Введите действительный национальный номер.',
-                ctaLoading:'Поиск...'
-            },
-            zh: {
-                title:'Trust Signals',
-                ready:'厌倦谎言了吗？',
-                headline1:'Trust Signals 将揭示',
-                headline2:'你伴侣的真实情况。',
-                enter1:'输入你想要',
-                phone:'查询的电话号码',
-                enter2:'',
-                label:'号码（区号 + 本机号码——国家区号在国旗中）',
-                cta:'立即查询',
-                privacy:'对方不会收到任何通知。',
-                terms:'继续即表示你同意我们的<br>条款与隐私政策。',
-                errInvalid:'号码无效，请检查后重试。',
-                errRange:'请输入有效的本地号码。',
-                ctaLoading:'查询中...'
-            },
-            sk: {
-                title:'Trust Signals',
-                ready:'Už máte dosť klamstiev?',
-                headline1:'Trust Signals odhalí',
-                headline2:'pravdu o vašom partnerovi.',
-                enter1:'Zadajte',
-                phone:'telefónne číslo',
-                enter2:'ktoré chcete skontrolovať',
-                label:'Číslo (predvoľba + číslo — kód krajiny je pri vlajke)',
-                cta:'Skontrolovať teraz',
-                privacy:'Osoba nebude upozornená.',
-                terms:'Pokračovaním súhlasíte s našimi <br>Podmienkami a Zásadami ochrany súkromia.',
-                errInvalid:'Neplatné číslo. Skontrolujte a skúste znova.',
-                errRange:'Zadajte platné národné číslo.',
-                ctaLoading:'Vyhľadávanie...'
-            },
-            ar: {
-                title:'Trust Signals',
-                ready:'هل سئمت من الأكاذيب؟',
-                headline1:'سيكشف Trust Signals',
-                headline2:'الحقيقة عن شريكك.',
-                enter1:'أدخل',
-                phone:'رقم الهاتف',
-                enter2:'الذي تريد التحقق منه',
-                label:'الرقم (رمز المنطقة + الرقم — رمز الدولة موجود عند العلم)',
-                cta:'افحص الآن',
-                privacy:'لن يتم إشعار الطرف الآخر.',
-                terms:'بالمتابعة فإنك توافق على <br>الشروط وسياسة الخصوصية.',
-                errInvalid:'الرقم غير صالح. يرجى المراجعة والمحاولة مرة أخرى.',
-                errRange:'يرجى إدخال رقم محلي صالح.',
-                ctaLoading:'جارٍ البحث...'
+                ready:'¿Cansado de mentiras?',
+                headline1:'Trust Signals revelará',
+                headline2:'la verdad sobre tu pareja.',
+                enter1:'Ingresa el',
+                phone:'número de teléfono',
+                enter2:'que deseas investigar',
+                label:'Número (código de área + número — el código del país está en la bandera)',
+                cta:'Investigar ahora',
+                privacy:'La persona no será notificada.',
+                terms:'Al continuar, aceptas nuestros <br>Términos y Política de Privacidad.',
+                errInvalid:'Este número no es válido. Revisa e inténtalo de nuevo.',
+                errRange:'Introduce un número nacional válido.',
+                ctaLoading:'Buscando...'
             }
         };
 
         const COUNTRY_TO_LANG = {
-            // Américas
-            US:'en', CA:'en', MX:'es-mx', BR:'pt', AR:'es', CL:'es', CO:'es', PE:'es', VE:'es', UY:'es', PY:'es', BO:'es', EC:'es',
-            // Europa Oc/Set/Norte
-            GB:'en', IE:'en', FR:'fr', ES:'es', PT:'pt', DE:'de', AT:'de', CH:'de', BE:'fr', NL:'nl',
-            IT:'it',
-            // Leste/Balcãs (exemplos)
-            SK:'sk', CZ:'cs', PL:'pl', RO:'ro', HU:'hu', RU:'ru', UA:'uk',
-            // Oriente Médio / Norte da África
-            SA:'ar', AE:'ar', EG:'ar', MA:'ar',
-            // Ásia
-            CN:'zh', HK:'zh', TW:'zh', JP:'ja', KR:'ko',
-            // Oceania
-            AU:'en', NZ:'en'
+            // Américas (apenas países de língua espanhola)
+            MX:'es-mx', AR:'es', CL:'es', CO:'es', PE:'es', VE:'es', UY:'es', PY:'es', BO:'es', EC:'es',
+            // Europa Oc/Set/Norte (apenas países de língua espanhola)
+            ES:'es',
+            // Outros (mantidos com os idiomas originais para não quebrar a funcionalidade de RTL, mas o texto será ES)
+            FR:'fr', DE:'de', AT:'de', CH:'de', BE:'fr', NL:'nl', IT:'it', SK:'sk', CZ:'cs', PL:'pl', RO:'ro', HU:'hu', RU:'ru', UA:'uk', SA:'ar', AE:'ar', EG:'ar', MA:'ar', CN:'zh', HK:'zh', TW:'zh', JP:'ja', KR:'ko', AU:'en', NZ:'en',
+            // Países de língua inglesa/portuguesa removidos dos preferenciais, mas mantidos para compatibilidade de Intl-Tel-Input:
+            US:'en', CA:'en', GB:'en', IE:'en', PT:'pt', BR:'pt',
         };
 
         const RTL_LANGS = new Set(['ar']);
@@ -324,10 +206,13 @@
         }
 
         function loadLang(lang){
-            lang = (lang || 'en').toLowerCase();
+            lang = (lang || 'es').toLowerCase(); // FALLBACK PRINCIPAL AGORA É ES
             document.documentElement.lang = lang;
             setDirForLang(lang);
-            const dict = I18N[lang] || I18N['en'];
+            // Se o idioma não for 'es' ou 'es-mx', forçamos 'es' para o texto,
+            // mas mantemos o código do idioma real para o RTL (ex.: ar, zh).
+            const dictKey = (lang in I18N) ? lang : 'es';
+            const dict = I18N[dictKey] || I18N['es'];
             applyStrings(dict);
         }
 
@@ -342,26 +227,25 @@
 
         /* ================== DOM REFS ================== */
         const phoneInput = document.querySelector("#phoneNumber");
-        const errorMsg   = document.querySelector("#error-msg");
-        const submitBtn  = document.querySelector("#submitBtn");
-        const progressBar= document.querySelector(".progress");
+        const errorMsg = document.querySelector("#error-msg");
+        const submitBtn = document.querySelector("#submitBtn");
+        const progressBar = document.querySelector(".progress");
         const btnSpinner = submitBtn.querySelector(".btn__spinner");
-        const btnLabel   = submitBtn.querySelector(".btn__label");
+        const btnLabel = submitBtn.querySelector(".btn__label");
 
-        /* =========== INTL-TEL-INPUT (DDD + número; sem DDI no campo) =========== */
+        /* =========== INTL-TEL-INPUT =========== */
         const iti = window.intlTelInput(phoneInput, {
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-            preferredCountries: ["br","us","gb","mx","de","fr","ru","cn","es","pt","sk","sa","ae","au","ca","cl","co","ar","it","jp","kr"],
+            // Preferimos países de língua espanhola ou neutros/comuns
+            preferredCountries: ["mx","es","ar","cl","co","pe"],
             separateDialCode: true,
-            // Mostra DDI fixo na bandeira
             nationalMode: true,
-            // Campo aceita apenas formato nacional (DDD + número)
             autoPlaceholder: "aggressive",
             formatOnDisplay: true,
             autoHideDialCode: false
         });
 
-        // Ajuste de placeholder para não exibir +DDI
+        // Ajuste de placeholder
         function refreshPlaceholder(){
             try {
                 const iso2 = iti.getSelectedCountryData().iso2;
@@ -389,19 +273,24 @@
             if (iti.isValidNumber()) hideError();
         });
 
-        // Pré-seleciona país por IP e carrega idioma (fallback sempre EN)
+        // Pré-seleciona país por IP e carrega idioma (fallback sempre ES)
         (async () => {
+            let initialLang = 'es'; // Fallback principal para espanhol
             try {
                 const res = await fetch('https://ipapi.co/json/');
                 if (!res.ok) throw new Error('geo fail');
                 const data = await res.json();
                 const iso2 = (data?.country_code || '').toLowerCase();
                 if (iso2) iti.setCountry(iso2);
-                const lang = (function(cc){ const l = COUNTRY_TO_LANG[cc?.toUpperCase()]; return I18N[l]?l:'en'; })(data?.country_code);
-                loadLang(lang);
+
+                const suggestedLang = COUNTRY_TO_LANG[data?.country_code?.toUpperCase()];
+                // Carrega o idioma sugerido ou 'es' se não for um dos idiomas de I18N
+                initialLang = (suggestedLang && (suggestedLang in I18N)) ? suggestedLang : 'es';
+
             } catch {
-                loadLang('en');
+                // Se falhar, usa 'es'
             }
+            loadLang(initialLang);
             refreshPlaceholder();
         })();
 
@@ -409,20 +298,21 @@
         phoneInput.addEventListener('countrychange', () => {
             try {
                 const iso2 = iti.getSelectedCountryData().iso2;
-                const cc = iso2 ? iso2.toUpperCase() : 'US';
-                const lang = (function(cc){ const l = COUNTRY_TO_LANG[cc]; return I18N[l]?l:'en'; })(cc);
+                const cc = iso2 ? iso2.toUpperCase() : 'ES'; // Fallback para ES
+                const suggestedLang = COUNTRY_TO_LANG[cc];
+                // Carrega o idioma sugerido ou 'es'
+                const lang = (suggestedLang && (suggestedLang in I18N)) ? suggestedLang : 'es';
                 loadLang(lang);
-            } catch { loadLang('en'); }
+            } catch { loadLang('es'); } // Fallback final para ES
             refreshPlaceholder();
-            // Após trocar país, se já estiver longo, aplicamos o limite
             setTimeout(enforceMaxLengthIfNeeded, 0);
         });
 
         /* ================== UI Helpers ================== */
         function tkey(key){
-            const lang = (document.documentElement.lang || 'en').toLowerCase();
-            const dict = I18N[lang] || I18N['en'];
-            return dict[key] || (I18N['en'][key] || '');
+            const lang = (document.documentElement.lang || 'es').toLowerCase();
+            const dict = I18N[lang] || I18N['es'] || I18N.fallback;
+            return dict[key] || (I18N['es'][key] || I18N.fallback[key] || '');
         }
         function showError(msg){
             errorMsg.classList.remove("hidden");
@@ -448,8 +338,7 @@
             }
         }
 
-        /* ================== LIMITADOR POR PAÍS (não altera o submit) ================== */
-        // Corta dígitos excedentes conforme validação libphonenumber (TOO_LONG)
+        /* ================== LIMITADOR POR PAÍS ================== */
         let __trimming = false;
         function enforceMaxLengthIfNeeded(){
             if (__trimming) return;
@@ -463,22 +352,19 @@
             try {
                 const data = iti.getSelectedCountryData();
                 const dial = (data && data.dialCode) ? String(data.dialCode) : '';
-                // pega apenas dígitos nacionais do input atual
                 let digits = (phoneInput.value || '').replace(/\D+/g, '');
                 let guard = 0;
                 while (digits.length > 0 && guard < 50) {
-                    // usa setNumber para reformatar respeitando nationalMode
                     iti.setNumber('+' + dial + digits);
                     err = iti.getValidationError();
                     if (err !== VERR.TOO_LONG) break;
-                    digits = digits.slice(0, -1); // remove 1 dígito e reavalia
+                    digits = digits.slice(0, -1);
                     guard++;
                 }
             } catch(_) {} finally {
                 __trimming = false;
             }
         }
-        // Eventos: digitação, colagem e troca de país
         phoneInput.addEventListener('input', () => { requestAnimationFrame(enforceMaxLengthIfNeeded); });
         phoneInput.addEventListener('paste', () => setTimeout(enforceMaxLengthIfNeeded, 0));
 
@@ -488,40 +374,29 @@
 
             if (!iti.isValidNumber()) { showError(tkey('errInvalid')); return; }
 
-            // E.164 com DDI (ex.: +5511912345678)
             const e164 = iti.getNumber(intlTelInputUtils.numberFormat.E164) || '';
             if (!e164) { showError(tkey('errRange')); return; }
 
             hideError();
             setLoading(true);
 
-            // 1. Número para o back-end (com +)
-            const cleanedDigits = e164.replace(/\D+/g, ''); // 5511912345678
+            const cleanedDigits = e164.replace(/\D+/g, '');
 
-            // 2. Número para a URL (sem + e sem URL-encoding)
-            const urlNumber = cleanedDigits; // Ex: 5511912345678
+            const urlNumber = cleanedDigits;
 
-            // Pega as UTMS da URL atual
             const currentUrl = new URL(window.location.href);
             let utmParams = '';
             for (const [key, value] of currentUrl.searchParams.entries()) {
-                // Adiciona apenas os parâmetros de UTM e relacionados, e os codifica
                 if (key.startsWith('utm_') || ['source', 'medium', 'campaign', 'content', 'term'].includes(key)) {
                     utmParams += `&${key}=${encodeURIComponent(value)}`;
                 }
             }
 
-            // Construção da URL de redirecionamento: https://acessoprivado.online/etapa2/?tel=...&utms
-            // O urlNumber não é codificado, mas os demais parâmetros são
             const redirectUrl = `https://acessoprivado.online/etapa2/?tel=${urlNumber}${utmParams}`;
 
-
-            // Lógica original de chamada de API e salvamento de dados (mantida, mas o redirecionamento é no finally)
-            localStorage.setItem("phoneNumber", cleanedDigits); // Salva o número (sem +)
+            localStorage.setItem("phoneNumber", cleanedDigits);
 
             try {
-                // Chamada de API usa o E.164 SEM o '+' para este endpoint específico,
-                // que é o formato 'cleanedDigits' (5511912345678)
                 const r = await fetchWithTimeout("../api-whatsapp.php", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -544,7 +419,7 @@
             } catch (_) {
                 // silencioso; Step 2 fará fallback se preciso
             } finally {
-                // ActiveCampaign em background (mantido)
+                // ActiveCampaign em background
                 try {
                     const acPayload = JSON.stringify({ phone: cleanedDigits });
                     fetch("./save.php", {
@@ -559,7 +434,7 @@
                     }
                 } catch(_){}
 
-                // Redirecionamento modificado (sem %2B)
+                // Redirecionamento
                 window.location.href = redirectUrl;
             }
         });
@@ -570,8 +445,7 @@
         });
     </script>
 
-  <!-- Meta Pixel Code -->
-<script>
+ <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -579,23 +453,20 @@ if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+'https://connect.facebook.net/en_US/fbevents.js'); // NOTE: Manually kept en_US for Facebook Pixel base
 fbq('init', '1325812522225211');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1325812522225211&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-
 <script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
 ></script>
 
 </body>
 </html>
-
